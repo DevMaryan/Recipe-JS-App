@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            font-family:helvetica;
+        }
+        #header{
+            display:flex;
+            justify-content:baseline;
+            background-color:rgb(22, 133, 167);
+            height:200px;
+            box-shadow: 0 2px 4px 0 rgba(22, 22, 22, 0.77);
+        }
+        #content{
+            display:flex;
+            flex-direction:row;
+            justify-content:baseline;
+            background-color:#adacac;
+            height:70vh;
+            
+        }
+        .btn{
+            margin:0 auto;
+            margin-top:5%;
+            padding:5px;
+            background-color:#c70505;
+            color:rgb(255, 253, 253);
+            height:30px;
+            border:0;
+            cursor:pointer;
+            padding-left:1rem;
+            padding-right:1rem;
+            border-radius:3px;
+        }
+        .btn:hover{
+            background-color:#9b0404;
+        }
+        #cntc{
+            width:20px;
+            height:20px;
+            position:absolute;
+            text-align: center;
+            color:#005091;
+            font-size:18px;
+            top:-10px;
+            left:-10px;
+            border-radius:50%;
+            background-color:#e0e0e0;
+            cursor: pointer;
+
+
+        }
+        #recipeName{
+            margin:0 auto;
+            width:400px;
+            height:400px;
+            border-radius:3px;
+            background-color:#FFF;
+            color:#333;
+            padding:1.5rem;
+            margin-top:50px;
+            position:relative;
+            box-shadow: 0 2px 6px 0 rgba(22, 22, 22, 0.77);
+        }
+        #recipeName::before{
+            content:'new';
+            color:#FFF;
+            background-color:rgb(206, 6, 6);
+            padding:1px 7px 2px 7px;
+            border-radius:3px;
+            margin-bottom:20px;
+            position:absolute;
+            left:22px;
+            top:38px;
+        }
+        li::before{
+            display:inline-block;
+            width:12px;
+            height:11px;
+            border-radius:50%;
+            background-color:rgb(141, 141, 141);
+            color:#FFF;
+            content:'x';
+            font-size:8px;
+            text-align: center;
+            padding-top:3px;
+            padding-left:1px;
+            margin-left:-20px;
+            cursor:pointer;
+        }
+        li:hover{
+            background-color:#f5e9e94b;
+        }
+
+        li{
+            padding:5px;
+            color:#333;
+            cursor:pointer;
+        }
+        ul{
+            padding:0.3rem;
+            margin-left:10px;
+            /*list-style-type: none;*/
+            color:#252526;
+            text-transform: capitalize;
+        }
+        h1{
+            color:#FFF;
+            background-color: #005091;
+            padding:5px;
+            border-radius:3px 3px 0px 0px;
+            border-bottom:2px solid #252526a9;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        h1::after{
+            content:' Recipe';
+            color:FFF;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'header'><button class = 'btn' onclick ='recipe()' type = 'button'>Add Recipe</button></div>
+    <div id = 'recipeName' style='display:none;'></div>
+    <script src = './js/app.js'></script>
+</body>
+</html>
